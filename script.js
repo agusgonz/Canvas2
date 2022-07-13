@@ -1,18 +1,20 @@
 var canvas = document.getElementById(canvas);
 var c = canvas.getContext("2d");
 
-function dibujLinea(color, xI, yI, xF, yF){
-    lienzo.beginPath();
-    lienzo.strokeStyle = color;
-    lienzo.moveTo(xI, yI);
-    lienzo.lineTo(xF, yF);
-    lienzo.stroke();
-    lienzo.closePath(); 
+dibujLinea("red", 20, 20, 200,300);
 
-    lienzo.beginPath();
-    lienzo.strokeStyle = color;
-    lienzo.moveTo(yI, xI);
-    lienzo.lineTo(yF, xF);
-    lienzo.stroke();
-    lienzo.closePath(); 
+function dibujLinea(color, xI, yI, xF, yF){
+    c.beginPath();
+    c.strokeStyle = color;
+    c.moveTo(xI, yI);
+    c.lineTo(xF, yF);
+    c.stroke();
+    c.closePath(); 
+
+    c.beginPath();
+    c.strokeStyle = color;
+    c.moveTo(yI, xI);
+    c.lineTo(yF, xF);
+    c.stroke();
+    c.closePath(); 
 }
